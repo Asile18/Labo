@@ -1,0 +1,586 @@
+/* recherche avancée/hotel recherché apparait/disparait */
+#rechercheAvancee{
+  display: none;
+  background-color: skyblue;
+}
+#hotelRecherche{
+	display: none;
+}
+
+.forum ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.forum li {
+  flex : 1 1 15vw;
+  height: 40px;
+  /*border : 1px solid black;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.forum li a {
+  /*width : 20vw;*/
+  background-color: aliceblue;
+  line-height: 40px;
+  text-align: center;
+  padding: 0px 25px;
+  /*margin: 0 auto;*/
+}
+.forum li a:hover {
+   background-color: skyblue;
+   border: 3px double salmon;
+   border-radius: 20px;
+}
+
+body{
+  margin: 0;
+  background-color: aliceblue;
+}
+
+/* ------------------------------------- *//*Navgation*/
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: skyblue;
+  color: salmon;
+  border-top: 3px double salmon; 
+  border-bottom: 3px double salmon; 
+}
+
+.navigation {
+  float: left;
+  margin: 0;
+
+}
+
+.navigation a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: salmon;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  background-color: deepskyblue;
+}
+
+#profil{
+	float: right;
+	padding: 14px 16px;
+}
+/* ------    css pour étoiles recherche avancé-------	*/
+#blocStar{
+    float: left;
+    margin-top: 5%;
+}
+
+.rate {
+    float: right;   
+    padding: 0 10px;
+    margin-right: 65px; 
+    margin-top: -45px; 
+    background-color: skyblue;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #9e9c94;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+.avancedSearch{
+    border: 2px solid black;
+}
+#avancedSearch td{
+    padding-left: 10px;
+    width: 15%;
+}
+
+.containerLogin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.Connecter{
+ border: 1px solid black;
+ background-color:skyblue;
+ border: 3px double salmon;
+ color: navy;
+ width: 175px;
+ padding:5px;
+ padding-right: 15px;
+}
+#ou{
+  color: navy;
+  margin-top: 230px;
+}
+
+
+.inputFix{
+  width:99%;
+   margin:5px;
+}
+
+.inputLogin{
+  margin:5px;
+}
+
+.buttonLogin{
+  text-align: center;
+}
+
+.roomImg{
+    width: 500px;
+    height: auto;
+}
+
+
+/*Page user profile*/
+#formUserProfile > input{
+  margin-top: 10px;
+}
+/*----HISTORIQUE USER------------------------*/
+
+
+.itemGrow{
+  flex-grow:1;
+  height:50px;
+  margin:25px;
+}
+
+#userProfile{
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 30px;
+  color: navy;
+}
+
+#tableUserProfile{
+  margin: 0 auto;
+  margin-top: 30px;
+  color: navy;
+}
+
+/*----HISTORIQUE USER------------------------*/
+
+a
+{
+  color: salmon;
+  text-decoration: none;
+}
+
+#historicUser{
+  margin: 60px auto;
+  padding: 30px; 
+  width: 40%;
+  text-align: center;
+  background-color: skyblue;
+  border: 3px double salmon;
+}
+/* SEARCH ROOM */
+#roomSearchForm{
+  padding: 5px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: skyblue;
+  overflow: hidden;
+}
+.roomSearch 
+{
+  width: 80%;
+  margin: 1% 10%;
+  box-shadow: 10px 5px 2px salmon;;
+  display: inline-flex;
+  flex-direction: row;
+  border: solid salmon 1px;
+  border-radius: 15px;
+  background-color: skyblue;
+
+}
+.roomImg
+{
+  width: 35%;
+  margin: 1% 2.5%;
+  
+}
+.roomImg img
+{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+}
+.roomInfo 
+{
+  width: 55%;
+  margin: 1% 2.5%;
+}
+.capitalize
+{
+  text-transform: uppercase;
+  font-size: 14px;
+  color: grey;
+}
+
+#historicUser h2{
+  color: navy;
+}
+#historicUser .tableHistoricUser, .tableHistoricUser td{
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid salmon;
+  color: navy;
+}
+/*------Contact--------------------------------*/
+.contactStar{
+  color: #ffc700;  
+}
+#contact{
+  background-color: lightskyblue;
+  margin: 50px;
+  width: 1100px;
+  height: 900px;
+  padding: 30px;
+  border-radius: 140px;
+  box-shadow: 10px 5px 2px salmon;
+  border: solid salmon 1px;
+}
+#affichageTableHostels{
+  margin: 0 auto;
+  /* border: 3px double salmon; */
+  color: navy;
+}
+
+/* ------css pour open street map-------*/ 
+#mapid{
+  margin: 0 auto;
+  height: 500px;
+  width: 900px;
+  margin-top: 30px;
+  border: 3px double salmon;
+}
+input{
+  background-color: aliceblue;
+}
+/*-----Reservation 1--------------------------*/
+#allReservation{
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+
+}
+#insurance{
+  margin-left: 38%; 
+  margin-top: 2%;
+}
+#reservation{
+  padding: 50px;
+  background-color: skyblue;
+  border: 3px double salmon;
+  margin-top: 60px;
+}
+
+#reservation table, #reservation th, #reservation td{
+  margin: 0 auto;
+  border: 1px solid salmon;
+  color: navy;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: center;
+}
+
+.recap{
+  margin-bottom: 60px;
+  color: navy;
+}
+.recap h1{
+  text-align: center;
+  margin-bottom: 50px;
+  color: navy;
+}
+
+#montant{
+  margin : 0 auto;
+  margin-top: 20px;
+}
+#reserver{
+  display: block;
+  margin: 0px auto;
+  margin-top: 1%;
+}
+/*-----Reservation 2 Coordonnées--------------------------*/
+#userInfo{
+  margin: 0 auto;
+  padding: 20px;
+  background-color: skyblue;
+  border: 3px double salmon;
+  display: none;
+}
+
+
+.coordinates{
+  margin-left: 10px;
+  padding: 30px;
+  padding-top: 60px;
+  width: 60%;
+  text-align: center;
+  border: 3px double salmon;
+  text-align: left;
+}
+.coordinates, h1{
+  text-align: center;
+  color: navy;
+}
+.coordinates input{
+  margin-top: 30px;
+}
+/*-----Reservation 3 Paiement--------------------------*/
+
+#payment{
+  display: none;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: skyblue;
+  border: 3px double salmon;
+}
+#payment input{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*-----Reservation 4 Confirmation----------------------*/
+#confirmation{
+  width: 90%;
+  margin: 10px auto;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: skyblue;
+  border: 3px double salmon;
+}
+.confirmation, .confirmation h1{
+  text-align: center;
+  color: navy;
+}
+.tabRecapReservation{
+  margin: 0 auto;
+}
+
+.recapReservation{
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.recapReservation table, .recapReservation th, .recapReservation td, #confirmation td{
+  
+  border: 1px solid salmon;
+  color: navy;
+  border-collapse: collapse;
+  text-align: center;
+}
+  
+.msg {
+  border-radius: 10px;
+  padding : 10px;
+}
+
+.msg > p:nth-child(2){
+  font-style: italic;
+  color : white;
+}
+
+.bgc-odd{
+  background-color: deepskyblue;
+  padding-left: 75px;
+  border: 3px double salmon;
+}
+.bgc-even{
+  background-color: lightskyblue;
+  padding-left: 75px;
+  border: 3px double salmon;
+  margin-top: 20px;
+}
+.msgs {
+  margin : 10px;
+
+}
+/* .jo{
+=======
+}
+
+/*
+.jo{
+>>>>>>> FORUMCSS
+  background-color:;
+height: 85px;
+margin: 25px
+border-radius: 10px;
+<<<<<<< HEAD
+} */
+
+.content a:hover {
+   color: lightskyblue;
+   border-radius: 20px;
+   border: 3px double salmon;
+}
+
+
+.box {
+    background:lightskyblue;
+    border-radius: 6px;
+    transition-property: background, border-radius;
+    transition-duration: .2s, 1s;
+    transition-timing-function: linear;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+.box:hover {
+  background: deepskyblue;
+  border-radius: 50%;
+  border: 3px double salmon;
+}
+
+/*.h2-msg h2{
+    text-align: center;
+    background-color: lightpink;
+    width: 100px;
+    margin: 0 auto;
+}
+.h2-msg h2:hover{
+   border-radius: 50%;
+
+  -webkit-transition-property: border-radius;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0s;
+ 
+    transition-property: background, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.h2-msg:hover{
+  color: red;
+  font-weight: bold;
+  
+
+}*/
+
+/*CSS pour liste des éléments pour l'admin*/
+.tdTableAdmin{
+    border: 2px solid black;
+    text-align: center;
+
+  }
+.tableAdmin{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+/* FAQ */
+.questionIcone 
+{
+  width: 1%;
+  margin: 2% 3% 0% 1%;
+}
+.italic
+{
+  font-style: italic;
+}
+.faq
+{
+  margin-bottom: 1%; 
+}
+.searchBar 
+{
+  width: 80%;
+  margin: 2% 10%;
+}
+.searchBar input[name="keyword"]
+{
+  width: 60%;
+}
+#addFaq
+{
+  box-shadow: 10px 5px 1px skyblue;
+  border: solid skyblue 1px;
+  border-radius: 15px;
+}
+#addFaq form 
+{
+  margin: 2%;
+  padding: 2%;
+}
+#addFaq input 
+{
+  margin: 1%;
+  width: 80%;
+  /* padding: 2%; */
+}
+
+.fa-star::before{
+  color: gold;
+}
+.h1{
+   color:lightskyblue;
+   margin:5%;
+   border: 3px double salmon;
+   box-shadow: 5px 7px 11px 2px #00bfff80;
+
+
+   
+
+}
+
+.contentForum{
+  color:black;
+  text-align: center;
+  background-color: skyblue;
+  font-style: bold;
+  margin: 10px;
+  padding: 20px;
+  font-weight: bold;
+  border: 3px double salmon;
+  box-shadow: 5px 7px 11px 2px #00bfff80;
+}
+
+/*------------UPDATE CSS ELIAS-----------------*/
+
+.rate p {
+  margin-bottom: 0;
+}
